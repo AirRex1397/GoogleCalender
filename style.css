@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #eaeaea;
+}
+
+.top-bar {
+    height: 60px;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.today-btn {
+    background: #2a2a2a;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.app {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+
+.sidebar {
+    width: 260px;
+    background: #1a1a1a;
+    padding: 20px;
+}
+
+.create-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1a73e8;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.mini-calendar h4 {
+    margin-bottom: 10px;
+}
+
+.mini-weekdays,
+.mini-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 12px;
+}
+
+.mini-days span {
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.mini-days .active {
+    background: #1a73e8;
+}
+
+.mini-days .muted {
+    color: #555;
+}
+
+
+.calendar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px 0;
+    text-align: center;
+    color: #9aa0a6;
+    border-bottom: 1px solid #333;
+}
+
+.days {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(140px, 1fr);
+}
+
+.day {
+    border: 1px solid #2a2a2a;
+    padding: 8px;
+    position: relative;
+    border-radius: 12px;  
+}
+
+
+.day span {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 14px;
+}
+
+.day:hover {
+    background: #202124;
+}
+
+.day.muted {
+    background: #181818;
+}
+
+.day.active span {
+    background: #1a73e8;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
